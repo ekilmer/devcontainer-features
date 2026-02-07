@@ -1,0 +1,29 @@
+{
+    "name": "Claude Code CLI",
+    "id": "claude-code",
+    "version": "1.0.0",
+    "description": "Installs the Claude Code CLI globally",
+    "options": {},
+    "documentationURL": "https://github.com/ekilmer/devcontainer-features/tree/main/src/claude-code",
+    "licenseURL": "https://github.com/ekilmer/devcontainer-features/blob/main/LICENSE",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "anthropic.claude-code"
+            ]
+        }
+    },
+    "containerEnv": {
+        "PATH": "/home/vscode/.local/bin:${PATH}"
+    },
+    "mounts": [
+        {
+            "source": "claude-code-config-${devcontainerId}",
+            "target": "/home/vscode/.claude",
+            "type": "volume"
+        }
+    ],
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
