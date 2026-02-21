@@ -1,0 +1,22 @@
+{
+    "name": "mise",
+    "id": "mise",
+    "version": "1.0.0",
+    "description": "Installs the mise tool manager globally",
+    "options": {},
+    "documentationURL": "https://github.com/ekilmer/devcontainer-features/tree/main/src/mise",
+    "licenseURL": "https://github.com/ekilmer/devcontainer-features/blob/main/LICENSE",
+    "containerEnv": {
+        "PATH": "/home/vscode/.local/share/mise/shims:/home/vscode/.local/bin:${PATH}"
+    },
+    "mounts": [
+        {
+            "source": "mise-data-${devcontainerId}",
+            "target": "/home/vscode/.local/share/mise",
+            "type": "volume"
+        }
+    ],
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
