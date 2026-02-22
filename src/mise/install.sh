@@ -42,12 +42,4 @@ if [ -x "${USER_HOME}/.local/bin/mise" ]; then
     ln -sf "${USER_HOME}/.local/bin/mise" "/usr/local/bin/mise"
 fi
 
-# Ensure the mise data directory is owned by the target user.
-# The volume mount in devcontainer-feature.json creates this directory as root
-# before the install script runs, so mise would get permission errors at runtime.
-MISE_DATA_DIR="${USER_HOME}/.local/share/mise"
-if [ -d "${MISE_DATA_DIR}" ] && [ "$(id -u)" = "0" ] && [ "${USERNAME}" != "root" ]; then
-    chown -R "${USERNAME}" "${MISE_DATA_DIR}"
-fi
-
 echo "mise installed successfully."

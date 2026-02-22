@@ -23,6 +23,7 @@
             "type": "volume"
         }
     ],
+    "postAttachCommand": "if [ -d /home/vscode/.claude ] && id vscode >/dev/null 2>&1; then sudo chown -R vscode:vscode /home/vscode/.claude; fi",
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils"
     ]
