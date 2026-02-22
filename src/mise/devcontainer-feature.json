@@ -16,7 +16,7 @@
             "type": "volume"
         }
     ],
-    "postAttachCommand": "if [ -d /home/vscode/.local/share/mise ] && id vscode >/dev/null 2>&1; then sudo chown -R vscode:vscode /home/vscode/.local/share/mise; fi",
+    "postAttachCommand": "if [ -d /home/vscode/.local/share/mise ] && id vscode >/dev/null 2>&1; then sudo chown vscode:vscode /home/vscode/.local /home/vscode/.local/share && sudo chown -R vscode:vscode /home/vscode/.local/share/mise; fi",
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils"
     ]
