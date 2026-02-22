@@ -1,7 +1,7 @@
 {
     "name": "uv Python Tool",
     "id": "uv",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "Installs the uv Python package manager globally",
     "options": {},
     "documentationURL": "https://github.com/ekilmer/devcontainer-features/tree/main/src/uv",
@@ -16,6 +16,7 @@
             "type": "volume"
         }
     ],
+    "postAttachCommand": "if [ -d /home/vscode/.cache/uv ] && id vscode >/dev/null 2>&1; then sudo chown vscode:vscode /home/vscode/.cache && sudo chown -R vscode:vscode /home/vscode/.cache/uv; fi",
     "installsAfter": [
         "ghcr.io/devcontainers/features/common-utils"
     ]

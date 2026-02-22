@@ -4,5 +4,11 @@
         "features": {
             "uv": {}
         }
+    },
+    "install_tool": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+        "features": {
+            "uv": {}
+        }
     }
 }
