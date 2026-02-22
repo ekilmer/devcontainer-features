@@ -14,6 +14,8 @@ jobs:
       matrix:
         features:
           - claude-code
+          - uv
+          - mise
         baseImage:
           - debian:latest
           - ubuntu:latest
@@ -34,6 +36,8 @@ jobs:
       matrix:
         features:
           - claude-code
+          - uv
+          - mise
     steps:
       - uses: actions/checkout@v6
 
