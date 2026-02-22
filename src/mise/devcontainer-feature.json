@@ -1,7 +1,7 @@
 {
     "name": "mise",
     "id": "mise",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "Installs the mise tool manager globally",
     "options": {},
     "documentationURL": "https://github.com/ekilmer/devcontainer-features/tree/main/src/mise",
