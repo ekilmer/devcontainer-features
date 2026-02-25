@@ -10,5 +10,13 @@
         "features": {
             "claude-code": {}
         }
+    },
+    "mise_tools": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "features": {
+            "mise": {},
+            "claude-code": {}
+        },
+        "overrideFeatureInstallOrder": ["./mise", "./claude-code"]
     }
 }
