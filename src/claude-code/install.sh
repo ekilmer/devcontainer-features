@@ -47,7 +47,6 @@ done
 
 echo "Claude Code CLI installed successfully."
 
-claude plugin marketplace add anthropics/skills || true
 claude plugin marketplace add anthropics/claude-plugins-official || true
 claude plugin marketplace add trailofbits/skills || true
 claude plugin marketplace add trailofbits/skills-curated || true
