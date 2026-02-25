@@ -52,3 +52,16 @@ claude plugin marketplace add trailofbits/skills || true
 claude plugin marketplace add trailofbits/skills-curated || true
 
 echo "Claude Code plugin marketplaces added"
+
+# Install CLI tools via mise (requires mise feature)
+if command -v mise > /dev/null 2>&1; then
+    echo "Installing CLI tools via mise..."
+    if [ "$(id -u)" = "0" ] && [ "${USERNAME}" != "root" ]; then
+        su - "${USERNAME}" -c "mise use -g ripgrep fd fzf jq delta"
+    else
+        mise use -g ripgrep fd fzf jq delta
+    fi
+    echo "CLI tools installed via mise."
+else
+    echo "WARNING: mise not found, skipping CLI tool installation."
+fi
