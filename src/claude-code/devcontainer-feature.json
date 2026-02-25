@@ -1,7 +1,7 @@
 {
     "name": "Claude Code CLI",
     "id": "claude-code",
-    "version": "1.3.0",
+    "version": "1.3.1",
     "description": "Installs the Claude Code CLI globally",
     "options": {},
     "documentationURL": "https://github.com/ekilmer/devcontainer-features/tree/main/src/claude-code",
@@ -18,7 +18,7 @@
     },
     "mounts": [
         {
-            "source": "claude-code-config-${devcontainerId}",
+            "source": "claude-code-config-${localWorkspaceFolderBasename}-${devcontainerId}",
             "target": "/home/vscode/.claude",
             "type": "volume"
         }
